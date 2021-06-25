@@ -4,10 +4,13 @@
 ## 需要安装的插件
 ```
 # 通过URI接口打开第三方APP并跳转到该uri
-cordova plugin add https://github.com/lampaa/com.lampa.startapp.git
+cordova plugin add com.lampa.startapp
 
 # 检测是否安装第三方App
-cordova plugin add cordova-plugin-appavailability --save
+cordova plugin add cordova-plugin-appavailability
+
+# 调用浏览器打开地址
+cordova plugin add cordova-plugin-inappbrowser
 ```
 ## 通过APP包名检测地图APP是否安装
 ```
@@ -19,15 +22,11 @@ appAvailability.check("com.baidu.BaiduMap",function () {
 ```
  
 
-> 常见的地图APP使用的包名：
-> 
-> 百度地图：com.baidu.BaiduMap
-> 
-> 高德地图：com.autonavi.minimap
-> 
-> 腾讯地图：com.tencent.map
-> 
-> 谷歌地图：com.google.android.apps.maps
+## 常见的地图APP使用的包名：
+- 百度地图：`com.baidu.BaiduMap`
+- 高德地图：`com.autonavi.minimap`
+- 腾讯地图：`com.tencent.map`
+- 谷歌地图：`com.google.android.apps.maps`
 
  
 
@@ -91,3 +90,8 @@ uri接口：google.navigation:q=
  
 或通过域名也可以调起地图APP：http://maps.google.com/maps
 ```
+
+
+## 参考链接
+- https://blog.csdn.net/github_34460372/article/details/79549330
+- https://github.com/hesijie/mapDemo
